@@ -1,0 +1,14 @@
+services:
+  extractor:
+    build: .
+    network_mode: host
+    environment:
+      OUTPUT_DIR: /data/downloads
+      HOST: 127.0.0.1
+      PORT: 8081
+      APP_TOKEN: ${APP_TOKEN:?请设置APP_TOKEN}
+      ALLOWED_DOMAINS: ${ALLOWED_DOMAINS:-}
+      MEDIA_COOKIES: ${MEDIA_COOKIES:-}
+    volumes:
+      - ./downloads:/data/downloads
+    restart: unless-stopped

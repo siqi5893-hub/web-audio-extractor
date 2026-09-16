@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-audio-extractor"
+version = "1.1.0"
+description = "Extract MP3 audio from public web pages"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["Flask>=3.0,<4", "yt-dlp>=2025.1.15"]
+
+[project.scripts]
+web-audio-extract = "web_audio_extractor.cli:main"
+web-audio-extract-server = "web_audio_extractor.web:main"
+
+[tool.setuptools.package-data]
+web_audio_extractor = ["templates/*.html"]
