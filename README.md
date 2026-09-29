@@ -59,3 +59,10 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ## 使用边界
 
 请只提取你拥有、获授权或平台允许下载的内容。不同站点更新后可能需要升级 `yt-dlp` 或增加新的适配器。
+
+## License
+
+This project is released under the [MIT License](./LICENSE).
+
+Third-party dependencies, website trademarks, and media rights remain with their respective owners. See [NOTICE.md](./NOTICE.md) for details.
+
